@@ -1,4 +1,4 @@
-import Chai from "./chai";
+import Chai from "./ChaiV";
 
 function App() {
   return (
