@@ -1,9 +1,18 @@
+import Chai from "./chai"
+
 
 function App() {
  
 
   return (
-   <h1>Chai or react with vite | AK</h1>
+    <>
+   <Chai/>
+
+{/* //</><h2>chai is return<h2/> } // cnt use bcz rtrn/export only one element
+                                 // so use wd <div></div> or<> </>(called  fragment) */}
+   <h2>chai is return</h2>
+   <p> test para</p>
+   </>
   )
 }
 
