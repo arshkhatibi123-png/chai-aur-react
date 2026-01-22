@@ -2,10 +2,10 @@ function customRender(reactElement, container)// (what, where)
 {
    const domElememnt = document.createElement//creating dom  element inject
    (reactElement) // thrw react elmnt
- domElememnt.innerHTML =mreactElement.children  // injct inner elemnt
- domElememnt.setAttribute('href,reactElement.props.href')
+ domElememnt.innerHTML =reactElement.children  // injct inner elemnt
+ domElememnt.setAttribute('href',reactElement.props.href)
  domElememnt.setAttribute('target, reactElement.props.target')
- 
+
  container. appendChild(domElement)
 }
 
