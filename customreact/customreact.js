@@ -7,9 +7,9 @@ function customRender(reactElement, container)// (what, where)
 
 //  container.appendChild(domElememnt)
 const domElememnt=document.createElement(reactElement.type)
-domElememnt.innerHTML=reactElement.children
+domElememnt.innerHTML=reactElement.children// ask react elemnt abt his childrn
 for(const prop in reactElement.props){
-   if (prop==children)continue;
+   if (prop=='children')continue;
    domElememnt.setAttribute(prop,reactElement.props[prop])
 }
 container.appendChild(domElememnt)
