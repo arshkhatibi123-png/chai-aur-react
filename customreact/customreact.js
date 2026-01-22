@@ -1,12 +1,21 @@
 function customRender(reactElement, container)// (what, where)
 {
-   const domElememnt = document.createElement(reactElement.type) // thrw react elmnt
- domElememnt.innerHTML =reactElement.children  // injct in ner elemnt
- domElememnt.setAttribute('href',reactElement.props.href)
- domElememnt.setAttribute('target',reactElement.props.target)
+//    const domElememnt = document.createElement(reactElement.type) // thrw react elmnt
+//  domElememnt.innerHTML =reactElement.children  // injct in ner elemnt
+//  domElememnt.setAttribute('href',reactElement.props.href)
+//  domElememnt.setAttribute('target',reactElement.props.target)
 
- container.appendChild(domElememnt)
+//  container.appendChild(domElememnt)
+const domElememnt=document.createElement(reactElement.type)
+domElememnt.innerHTML=reactElement.children
+for(const prop in reactElement.props){
+   if (prop==children)continue;
+   domElememnt.setAttribute(prop,reactElement.props[prop])
 }
+container.appendChild(domElememnt)
+}
+
+
 
 const reactElement ={            //create elemnt
    type: 'a',// type of element ie div or h or a
