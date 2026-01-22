@@ -1,19 +1,18 @@
 function customRender(reactElement, container)// (what, where)
 {
-   const domElememnt = document.createElement//creating dom  element inject
-   (reactElement) // thrw react elmnt
- domElement.innerHTML =reactElement.children  // injct inner elemnt
- domElement.setAttribute('href',reactElement.props.href)
- domElement.setAttribute('target',reactElement.props.target)
+   const domElememnt = document.createElement(reactElement.type) // thrw react elmnt
+ domElememnt.innerHTML =reactElement.children  // injct in ner elemnt
+ domElememnt.setAttribute('href',reactElement.props.href)
+ domElememnt.setAttribute('target',reactElement.props.target)
 
- container.appendChild(domElement)
+ container.appendChild(domElememnt)
 }
 
-const reactElement ={
-   type: 'a',
-   props: {
-    href:'http://google.com',
-    target:'_blank'
+const reactElement ={            //create elemnt
+   type: 'a',// type of element ie div or h or a
+   props: {                   // props is an object to add prprty
+    href:'http://google.com', // prpty 1
+    target:'_blank'              // prprty2
    },
     children:'Click me to visit google '
    
@@ -21,4 +20,4 @@ const reactElement ={
 
 const mainContainer=document.querySelector('#root')// root grab,and store at variable cld main cntnr
 
-customRender(reactElement, mainContainer)// (what to enject , whr 2 injct)
+customRender(reactElement, mainContainer)// (what to enject , whr 2 injct) will render
